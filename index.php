@@ -29,7 +29,6 @@
 
 						if($livro == '' || $conteudo == ''){
 							echo '<script>alert("Os campos não podem estar vazios!")</script>';
-							header('Location:index.php');
 						}else{
 							$cad = $pdo->prepare("INSERT INTO `livros` VALUES (null,?,?)");
 							if($cad->execute(array($livro,$conteudo))){
@@ -57,7 +56,7 @@
 		<section class="listLivro">
 
 			<div class="center">
-				<h2>Livros escritos</h2>
+				<h2>Lista de livros escritos</h2>
 				
 				<div class="table">
 
@@ -97,7 +96,7 @@
 							<div class="cell"><?php echo mb_substr($value['nome_livro'],0, 10); ?>...</div><!-- cell -->
 							<div class="cell"><?php echo mb_substr($value['conteudo'], 0, 10); ?>...</div><!-- cell -->
 							<div class="cell"><a href="editar-livro.php?id=<?php echo $value['id']; ?>">Editar</a></div><!-- cell -->
-							<div class="cell"><a class="del" href="deletar=<?php echo $value['id']; ?>">Deletar</a></div><!-- cell -->
+							<div class="cell"><a class="del" href="?deletar=<?php echo $value['id']; ?>">Deletar</a></div><!-- cell -->
 						</div><!-- row -->
 						<?php } ?>
 						

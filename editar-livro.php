@@ -32,7 +32,6 @@ $pdo = new PDO("mysql:host=localhost;dbname=crud","root","");
 
 						if($livro == '' || $conteudo == ''){
 							echo '<script>alert("Os campos não podem estar vazios!")</script>';
-							header('Location:index.php');
 						}else{
 							$atualiza = $pdo->prepare("UPDATE `livros` SET nome_livro = ?, conteudo = ? WHERE id = ?");
 							if($atualiza->execute(array($livro,$conteudo,$id))){

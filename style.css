@@ -51,7 +51,7 @@ section.main{
 	padding:20px 2%;
 }
 
-section.main .center > h2{
+section.main > .center > h2{
 	width: 100%;
 	padding: 20px 0;
 	font-size: 18px;
@@ -113,13 +113,20 @@ input[type=submit]:hover{
 .listLivro{
 	margin-top: 20px;
 }
+
+section.listLivro > .center > h2{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 18px;
+	text-align: center;
+}
+
 .listLivro .center{
 	padding-bottom: 20px;
 }
 
 .table {
     width: 100%;
-    margin-top: 20px;
 }
 
 .tabBody{
